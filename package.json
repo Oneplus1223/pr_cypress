@@ -1,0 +1,22 @@
+{
+  "name": "pr_cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oneplus1223/pr_cypress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oneplus1223/pr_cypress/issues"
+  },
+  "homepage": "https://github.com/Oneplus1223/pr_cypress#readme",
+  "devDependencies": {
+    "cypress": "^9.5.0"
+  }
+}
