@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "day1": "npx cypress run 'cypress/integration/assignments/Day1.spec.js'"
+    "test": "npx cypress run 'cypress/integration/assignments/*.js'"
   },
   "repository": {
     "type": "git",

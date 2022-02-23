@@ -1,3 +1,15 @@
 {
-  "watchForFileChanges":false
+  "watchForFileChanges": false,
+  "baseUrl": "https://www.ixigo.com/",
+  "pageLoadTimeout": 60000,
+  "defaultCommandTimeout": 5000,
+  "retries": {
+    "runMode": 2,
+    "openMode": 2
+  },
+  "env": {
+    "practiceUrl": "https://rahulshettyacademy.com/AutomationPractice/",
+    "redBusURL": "https://www.redbus.com/es-419/"
+  },
+  "video": false
 }

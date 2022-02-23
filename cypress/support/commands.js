@@ -23,3 +23,34 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('setText', (Locator, inputText) => {
+    cy.get(Locator)
+        .type(inputText)
+        .should('have.value', inputText)
+        .wait(2000)
+        .type('{enter}')
+})
+
+Cypress.Commands.add('minPrice', (Locator) => {
+    let priceArray = []
+    cy.get(Locator).each(($el, index, $list) => {
+        priceArray[index] = ($el.text());
+    })
+
+    cy.wrap(priceArray).then((arr) => {
+        cy.log(String(Math.min(...arr)));
+    })
+})
+
+Cypress.Commands.add('dropDownSelect', (dropDownLocator, optionLocat, lang) => {
+    cy.get(dropDownLocator).click()
+    cy.get(optionLocat).each(($el, index, $list) => {
+        cy.wrap($el).then((val) => {
+            if ((val.text()).includes(lang)) {
+                cy.wrap($el).click()
+            }
+        })
+
+    })
+})
